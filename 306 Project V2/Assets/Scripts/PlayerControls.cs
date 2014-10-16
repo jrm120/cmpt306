@@ -14,8 +14,11 @@ public class PlayerControls : MonoBehaviour {
 	float jumpForce;
 	float damageAmount;
 	float teleportDistance;
+	float moveSpeed = 0.1f;
 	
 	bool grounded = false;
+	
+	bool doubleJump = true;
 	
 	//Check for ground
 	public Transform groundCheck;
@@ -28,11 +31,11 @@ public class PlayerControls : MonoBehaviour {
 		transform.rotation = new Quaternion(0, 0, 0, 0);
 		anim = GetComponent<Animator>();
 	}
-
+	
 	// Skills are updated as they increase
 	void Update()
 	{
-		jumpForce = 100 * jumpSkill + 400;
+		jumpForce = 100 * jumpSkill + 750;
 		damageAmount = 10 + 2 * attackSkill;
 	}
 	
@@ -46,14 +49,14 @@ public class PlayerControls : MonoBehaviour {
 		float move = Input.GetAxis ("Horizontal");
 		if((move>0)&&(transform.position.x<70)){
 			//walk right
-			transform.position = new Vector2(transform.position.x +.05f, transform.position.y);
-			transform.rotation = new Quaternion(0,0,0,0);
 			anim.SetBool("Walk", true);
+			transform.position = new Vector2(transform.position.x + moveSpeed, transform.position.y);
+			transform.rotation = new Quaternion(0,0,0,0);
 		}else if((move<0)&&(transform.position.x>-7)){
 			//walk left
-			transform.position = new Vector2(transform.position.x -.05f, transform.position.y);
-			transform.rotation = new Quaternion(0,180,0,0);
 			anim.SetBool("Walk", true);
+			transform.position = new Vector2(transform.position.x - moveSpeed, transform.position.y);
+			transform.rotation = new Quaternion(0,180,0,0);
 		}else{
 			//stop walking
 			anim.SetBool("Walk", false);
@@ -63,6 +66,13 @@ public class PlayerControls : MonoBehaviour {
 		if((Input.GetButtonDown("Jump"))&&(grounded)){
 			anim.SetBool("Ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
+			doubleJump = true;
+		}
+		
+		//Double Jump
+		if ((Input.GetButtonDown ("Jump")) && (!grounded) && (doubleJump)) {
+			rigidbody2D.AddForce (new Vector2(0, jumpForce/1.5f));
+			doubleJump = false;
 		}
 		
 		//Attack
