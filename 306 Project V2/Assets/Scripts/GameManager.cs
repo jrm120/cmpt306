@@ -4,7 +4,8 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	
 	// Reference to player to access skills
-	public PlayerControls player;
+	public Player1Controls player;
+
 	
 	// Players life
 	public Texture playersHealthTexture;
