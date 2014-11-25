@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Enemy1Controls : MonoBehaviour {
-	public GameManager gameManager;
 
 	//animator
 	protected Animator anim;
@@ -29,18 +28,18 @@ public class Enemy1Controls : MonoBehaviour {
 		//update health
 		anim.SetInteger ("Health", Health);
 		//Start position
-		transform.position = new Vector3(startX, startY, 0);
+		transform.localPosition = new Vector3(startX, startY, 0);
 		transform.rotation = new Quaternion (0, 0, 0, 0);
 	}
 
 	void Update () {
 		//if position is invalid, turn around and move in other direction
-		if (transform.position.x < minX){
-			transform.position = new Vector2(minX, transform.position.y);
+		if (transform.localPosition.x < minX){
+			transform.localPosition = new Vector2(minX, transform.localPosition.y);
 			transform.rotation = new Quaternion(0, 0, 0, 0);
 			xSpeed*= -1;
-		}else if (maxX < transform.position.x){
-			transform.position = new Vector2(maxX, transform.position.y);
+		}else if (maxX < transform.localPosition.x){
+			transform.localPosition = new Vector2(maxX, transform.localPosition.y);
 			transform.rotation = new Quaternion(0, 180, 0, 0);
 			xSpeed*= -1;
 		}
@@ -62,7 +61,7 @@ public class Enemy1Controls : MonoBehaviour {
 			rigidbody2D.velocity = new Vector2(0, 0);
 			//destroy enemy after die animation
 			Destroy(gameObject, .6f);
-			gameManager.curEXP = gameManager.curEXP + expWorth;
+			//gameManager.curEXP = gameManager.curEXP + expWorth;
 		}
 	}
 }

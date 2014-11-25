@@ -1,0 +1,104 @@
+fileFormatVersion: 2
+guid: 65198d9cf0f67dd40ae58c2244c125d2
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Skills
+    21300002: Upgrades1
+    21300004: window2_13
+    21300006: Upgrades2
+    21300008: window2_17
+    21300010: Tab
+    21300012: Window
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Skills
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 6160
+        width: 842
+        height: 743
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Upgrades1
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 5239
+        width: 833
+        height: 783
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Upgrades2
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 4251
+        width: 833
+        height: 783
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tab
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 2284
+        width: 269
+        height: 109
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Window
+      rect:
+        serializedVersion: 2
+        x: 2581
+        y: 1477
+        width: 1172
+        height: 711
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

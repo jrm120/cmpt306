@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 883ae626d85d24347b3f5560456750b3
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - font: {instanceID: 0}
+  - MenuTab: {instanceID: 0}
+  - mainCam: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
