@@ -1,0 +1,7 @@
+luigo bugs
+
+-skeletons not able to walk down declines or up inclines
+-skeletons spawning too late
+-jump not responsive sometimes
+-rock golem throws too fast
+-1 hit kill from skeletons
